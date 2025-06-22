@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,15 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'heading': ['Space Grotesk', 'system-ui', 'sans-serif'],
+			},
+			backgroundImage: {
+				'gradient-warm': 'linear-gradient(135deg, #dc2626 0%, #7c3aed 50%, #2563eb 100%)',
+				'gradient-warm-light': 'linear-gradient(135deg, #fca5a5 0%, #c4b5fd 50%, #93c5fd 100%)',
+				'hero-gradient': 'linear-gradient(135deg, rgba(220, 38, 38, 0.9) 0%, rgba(124, 58, 237, 0.9) 50%, rgba(37, 99, 235, 0.9) 100%)',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -69,6 +79,14 @@ export default {
 				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
+				'fade-in': {
+					'0%': { opacity: '0', transform: 'translateY(20px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'scale-in': {
+					'0%': { opacity: '0', transform: 'scale(0.95)' },
+					'100%': { opacity: '1', transform: 'scale(1)' }
+				},
 				'accordion-down': {
 					from: {
 						height: '0'
@@ -87,6 +105,8 @@ export default {
 				}
 			},
 			animation: {
+				'fade-in': 'fade-in 0.6s ease-out',
+				'scale-in': 'scale-in 0.4s ease-out',
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out'
 			}
