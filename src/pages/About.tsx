@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Mail, Phone } from "lucide-react";
@@ -26,7 +25,7 @@ const About = () => {
 
   const projects = [
     "HMAL Projects – Funding strategies & brand growth",
-    "Water for Life NPC – "Water Warriors" youth program",
+    "Water for Life NPC – \"Water Warriors\" youth program",
     "B20 SA – Trade & investment policy dialogues",
     "Wecona – Women's economic participation across agri, mining, sports",
     "TATiC – Turkey-Africa trade & investment initiatives"
